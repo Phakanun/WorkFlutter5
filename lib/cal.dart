@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app2/about_me.dart';
 
 class Cal extends StatefulWidget {
   const Cal({super.key});
@@ -174,6 +175,27 @@ class _CalState extends State<Cal> {
               ),
               child: const Text(
                 'Calculate',
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+            const SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const AboutMe(),),);
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color.fromARGB(255, 127, 62, 152),
+                padding:
+                const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              child: const Text(
+                'About Me',
                 style: TextStyle(
                   fontSize: 18,
                   color: Colors.white,

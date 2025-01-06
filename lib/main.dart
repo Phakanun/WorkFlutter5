@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app2/cal.dart';
+import 'package:flutter_app2/welcome_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +22,13 @@ class MyApp extends StatelessWidget {
           seedColor: const Color.fromARGB(255, 127, 62, 152),
         ),
       ),
-      home: const Cal(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => (),
+        '/cal': (context) => Cal(),
+        '/welcome_page' : (context) => WelcomePage(),
+      },
+      //home: const WelcomePage(),
     );
   }
 }

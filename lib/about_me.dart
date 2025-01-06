@@ -8,12 +8,6 @@ class AboutMe extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Title'),
-        leading: IconButton(
-          onPressed: () {
-            debugPrint('leading icon pressed');
-          },
-          icon: const Icon(Icons.menu),
-        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(10),
@@ -133,6 +127,7 @@ class AboutMe extends StatelessWidget {
                 ),
               ),
             ),
+
           ],
         ),
       ),
