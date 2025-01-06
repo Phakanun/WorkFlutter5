@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app2/cal.dart';
 import 'package:flutter_app2/display_page.dart';
+import 'package:flutter_app2/display_page2.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({super.key});
@@ -122,6 +123,35 @@ class _WelcomePageState extends State<WelcomePage> {
               ),
               child: const Text(
                 'Display',
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+            const SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () {
+                String? input = Name.text;
+                int? inputAge = int.parse(Age.text);
+                debugPrint('Input: $inputAge');
+                Navigator.push(context, MaterialPageRoute(builder: (context) => DisplayPage2(
+                  name: input,
+                  age: inputAge,
+                ),
+                ),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color.fromARGB(255, 127, 62, 152),
+                padding:
+                const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              child: const Text(
+                'Display2',
                 style: TextStyle(
                   fontSize: 18,
                   color: Colors.white,
