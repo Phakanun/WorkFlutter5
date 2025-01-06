@@ -24,9 +24,8 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => (),
+        '/': (context) => WelcomePage(),
         '/cal': (context) => Cal(),
-        '/welcome_page' : (context) => WelcomePage(),
       },
       //home: const WelcomePage(),
     );
