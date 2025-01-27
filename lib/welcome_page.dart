@@ -161,7 +161,7 @@ class _WelcomePageState extends State<WelcomePage> {
             const SizedBox(height: 10),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const Cal(),),);
+                Navigator.pushNamed(context, '/cal');
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color.fromARGB(255, 127, 62, 152),
